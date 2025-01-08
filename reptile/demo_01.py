@@ -3,7 +3,7 @@ Description: 爬测试页面
 Author: zhang zhen
 Date: 2025-01-08 16:26:29
 LastEditors: zhang zhen
-LastEditTime: 2025-01-08 16:33:09
+LastEditTime: 2025-01-08 16:34:48
 FilePath: /PythonLearning2025/reptile/demo_01.py
 '''
 import requests
@@ -16,3 +16,6 @@ dic = {
 }
 
 resp = requests.get(url, headers = dic) # 处理头部
+
+# 打印返回信息
+print(resp.text)
