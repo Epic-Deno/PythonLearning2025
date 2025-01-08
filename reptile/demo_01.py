@@ -22,5 +22,5 @@ resp = requests.get(url, headers = dic) # 处理头部
 
 with open("index.html", mode="w") as f:
     f.write(resp.json().decode("utf-8")) # 读取网页的源代码
-# print("Over!!!")
+print("Over!!!")
 resp.close()  # 关掉
