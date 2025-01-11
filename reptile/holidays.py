@@ -12,3 +12,6 @@ import requests
 from bs4 import BeautifulSoup # 解析网页
 
 def getOfficialHolidays(year): #获取国务院节假日安排，包括调休
+    url = "https://www.gov.cn/zhengce/content/202310/content_6911527.htm"  #2024年放假安排url
+    rep = requests.get(url)  # Get方式获取网页数据
+    # rep.encoding = 'utf-8'
