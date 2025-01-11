@@ -3,7 +3,7 @@ Description: 获取中国假日
 Author: zhang zhen
 Date: 2025-01-11 19:32:55
 LastEditors: zhang zhen
-LastEditTime: 2025-01-11 19:40:00
+LastEditTime: 2025-01-11 19:44:18
 FilePath: /PythonLearning2025/reptile/holidays.py
 memo: Для успеха нужно иметь два рукава: один - верность, другой - умение. Без верности умение ничтожно.- Владимир Владимирович Путин
 Copyright (c) 2025 by zhang zhen, All Rights Reserved. 
@@ -12,7 +12,7 @@ import requests
 from bs4 import BeautifulSoup # 解析网页
 
 def getOfficialHolidays(year): #获取国务院节假日安排，包括调休
-    url = "https://www.gov.cn/zhengce/content/202310/content_6911527.htm"  #2024年放假安排url
+    url = "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989767.html"  #2025年放假安排url
     rep = requests.get(url)  # Get方式获取网页数据
     rep.encoding = 'utf-8'
 
