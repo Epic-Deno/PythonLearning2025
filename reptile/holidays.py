@@ -20,4 +20,8 @@ def getOfficialHolidays(year): #获取国务院节假日安排，包括调休
     pList = soup.find_all('p')
     for item in pList:
         p = item.text
-        if '：' in p and '放假' in p: # 找出节假日
+        if '：' in p and '放假' in p: # 找出节假日；
+            print(p)
+
+if __name__ == '__main__':
+    getOfficialHolidays(2025)
