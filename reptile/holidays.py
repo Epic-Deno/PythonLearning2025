@@ -3,7 +3,7 @@ Description: 获取中国假日
 Author: zhang zhen
 Date: 2025-01-11 19:32:55
 LastEditors: zhang zhen
-LastEditTime: 2025-01-11 19:38:25
+LastEditTime: 2025-01-11 19:40:00
 FilePath: /PythonLearning2025/reptile/holidays.py
 memo: Для успеха нужно иметь два рукава: один - верность, другой - умение. Без верности умение ничтожно.- Владимир Владимирович Путин
 Copyright (c) 2025 by zhang zhen, All Rights Reserved. 
@@ -18,3 +18,6 @@ def getOfficialHolidays(year): #获取国务院节假日安排，包括调休
 
     soup = BeautifulSoup(rep.text, 'html.parser')
     pList = soup.find_all('p')
+    for item in pList:
+        p = item.text
+        if '：' in p and '放假' in p: # 找出节假日
